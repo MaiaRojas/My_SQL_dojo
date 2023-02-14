@@ -16,4 +16,6 @@
 
 - [x] Cambia los nombres de los campos a singular, es decir, usuario_id y libro_id
 
-- [x] Toma una captura de pantalla del ERD y carga el archivo .png- 
+- [x] Toma una captura de pantalla del ERD y carga el archivo .png
+
+![Screenshot 2023-02-13 at 23 13 35](https://user-images.githubusercontent.com/25912510/218638060-bd6b0977-8574-447b-98e8-b874dad98dd2.png)
