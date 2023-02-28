@@ -59,11 +59,25 @@ VALUES(9, 'Jisso', 'Kim', '19', '2023-02-26 00:00:03', '2022-06-28 00:00:03', '3
 
 -- QUERIES
 
-SELECT * FROM ninjas WHERE dojos_id = 1;
 
-SELECT * FROM ninjas WHERE dojos_id = 3;
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojos_id
+WHERE dojos.id = 1;
 
-SELECT MAX(id) FROM ninjas JOIN dojos ON ninjas.dojos_id = dojos.id;
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojos_id
+WHERE dojos.id = 2;
+
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojos_id
+WHERE dojos.id = 3;
+
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojos_id
+	WHERE dojos.id = (SELECT id FROM dojos ORDER BY id DESC LIMIT 1);
+    
+SELECT * FROM dojos
+WHERE dojos.id = (SELECT dojos_id FROM ninjas ORDER BY dojo_id DESC LIMIT 1);
 
 
 
