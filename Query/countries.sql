@@ -53,10 +53,3 @@ WHERE countries.name = 'Argentina' AND district = 'Buenos Aires' AND cities.popu
 SELECT countries.region, COUNT(*) AS count_countries  FROM countries
 GROUP BY countries.region
 ORDER BY count_countries DESC;
-
-
-
-SELECT countries.name, COUNT(*) AS count_cities FROM cities
-JOIN countries ON countries.id = cities.country_id
-GROUP BY country_id
-ORDER BY count_cities DESC;
